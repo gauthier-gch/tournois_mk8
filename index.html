@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tournoi des Bâtons dans les Roues 🏁</title>
+
+  <!-- Polices : Marcellus (titres) + Montserrat (texte) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Bande de damier décorative en haut -->
+  <div class="checker-strip" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="kicker">🏁 Site officiel 🏁</p>
+      <h1 class="site-title">Tournoi des Bâtons<br><span>dans les Roues</span></h1>
+      <p class="subtitle">Là où l'aléatoire rabat toutes les cartes.</p>
+    </div>
+    <div class="speed-lines" aria-hidden="true"></div>
+  </header>
+
+  <!-- Onglets -->
+  <nav class="tabs" role="tablist">
+    <button class="tab is-active" data-tab="regles" role="tab">Règles</button>
+    <button class="tab" data-tab="avatars" role="tab">Avatars</button>
+    <button class="tab" data-tab="malus" role="tab">Malus</button>
+  </nav>
+
+  <main class="container">
+
+    <!-- ============ ONGLET RÈGLES ============ -->
+    <section id="regles" class="panel is-active" role="tabpanel">
+      <div class="rules-card">
+        <h2 class="rules-welcome">Bienvenue dans le tournoi des bâtons dans les roues</h2>
+        <p>
+          Ce tournoi n'est pas comme les autres : l'aléatoire est là pour mettre
+          des bâtons dans les roues de vos karts et <strong>rabattre complètement les cartes</strong>
+          par rapport à un tournoi classique.
+        </p>
+
+        <div class="rule-block">
+          <span class="rule-icon">🎲</span>
+          <div>
+            <h3>À chaque début de championnat</h3>
+            <p>
+              Pilote, kart, roues et parapente sont attribués <strong>aléatoirement</strong>
+              à chaque joueur. Chaque joueur peut relancer son tirage
+              <strong>une seule fois</strong> par championnat.
+            </p>
+          </div>
+        </div>
+
+        <div class="rule-block">
+          <span class="rule-icon">🎡</span>
+          <div>
+            <h3>À chaque début de course</h3>
+            <p>
+              On lance la roulette des malus : chaque joueur a
+              <strong>3 chances sur 4</strong> d'écoper d'un malus pour la course.
+            </p>
+          </div>
+        </div>
+
+        <div class="rule-block">
+          <span class="rule-icon">🤝</span>
+          <div>
+            <h3>Le malus duo</h3>
+            <p>
+              Certains malus se jouent à deux : si un joueur le tire,
+              un autre joueur en hérite forcément. Solidarité dans la galère !
+            </p>
+          </div>
+        </div>
+
+        <p class="rules-footer">Bonne chance… vous allez en avoir besoin. 🍌</p>
+      </div>
+    </section>
+
+    <!-- ============ ONGLET AVATARS ============ -->
+    <section id="avatars" class="panel" role="tabpanel">
+      <h2 class="section-title">Génération des avatars</h2>
+      <p class="section-intro">
+        Pilote, kart, roues et parapente sont tirés au sort pour chaque joueur.
+        Chaque encadré peut être relancé <strong>une fois</strong>.
+      </p>
+
+      <div class="avatar-stage">
+        <!-- Voile flou + bouton de génération -->
+        <div class="avatar-veil" id="avatarVeil">
+          <button class="btn btn-big" id="generateAvatarsBtn">🎰 Génération des avatars</button>
+        </div>
+
+        <!-- Grille 2x2 d'encadrés (1 par joueur) -->
+        <div class="avatar-grid" id="avatarGrid"><!-- généré par JS --></div>
+      </div>
+    </section>
+
+    <!-- ============ ONGLET MALUS ============ -->
+    <section id="malus" class="panel" role="tabpanel">
+      <h2 class="section-title">La roulette des malus</h2>
+      <p class="section-intro">
+        Les 4 roues tournent en même temps. Pas deux fois le même malus…
+        sauf le <strong>malus duo</strong>, qui frappe toujours deux joueurs !
+      </p>
+
+      <div class="malus-controls">
+        <button class="btn btn-big" id="spinMalusBtn">🎡 Lancer la roulette</button>
+      </div>
+
+      <div class="malus-grid" id="malusGrid"><!-- généré par JS --></div>
+
+      <div class="malus-legend">
+        <span><i class="lg lg-phys"></i> Physique</span>
+        <span><i class="lg lg-game"></i> In Game</span>
+        <span><i class="lg lg-duo"></i> Duo</span>
+        <span><i class="lg lg-none"></i> Aucun malus</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="checker-strip" aria-hidden="true"></div>
+    <p>Tournoi des Bâtons dans les Roues — que le meilleur (ou le plus chanceux) gagne.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
