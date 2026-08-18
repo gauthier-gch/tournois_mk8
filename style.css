@@ -196,6 +196,124 @@ body {
   color: var(--ink) !important;
 }
 
+/* Sous-titres de sections dans les règles */
+.rules-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 3.4vw, 1.6rem);
+  color: var(--yellow);
+  margin: 30px 0 6px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(255,255,255,.08);
+}
+
+/* Cartes de poules / groupes */
+.pools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 14px 0;
+}
+.pools-grid--2 { grid-template-columns: repeat(2, 1fr); }
+.pool-card {
+  background: var(--asphalt);
+  border: 1px solid rgba(255,255,255,.1);
+  border-left: 4px solid var(--yellow);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.pool-name {
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-size: 1.05rem;
+}
+.pool-seeds {
+  color: var(--ink-soft);
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+.pool-card sup { font-size: .62em; }
+
+/* Liste des malus dans les règles */
+.malus-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+.malus-cat {
+  background: var(--asphalt);
+  border: 1px solid rgba(255,255,255,.1);
+  border-top: 4px solid var(--ink-soft);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+.malus-cat.ml-phys { border-top-color: var(--blue); }
+.malus-cat.ml-game { border-top-color: var(--orange); }
+.malus-cat.ml-duo  { border-top-color: var(--magenta); grid-column: 1 / -1; }
+.malus-cat h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem; margin: 0 0 10px; color: var(--ink);
+  display: flex; align-items: center; gap: 8px;
+}
+.malus-count {
+  font-family: var(--font-body); font-size: .7rem; font-weight: 800;
+  background: rgba(255,255,255,.1); color: var(--ink-soft);
+  border-radius: 999px; padding: 2px 9px;
+}
+.malus-cat ul { margin: 0; padding-left: 18px; }
+.malus-cat li {
+  color: var(--ink-soft); line-height: 1.55; margin-bottom: 5px;
+  font-size: .92rem;
+}
+.malus-cat.ml-phys h4 { color: var(--blue); }
+.malus-cat.ml-game h4 { color: var(--orange); }
+.malus-cat.ml-duo  h4 { color: var(--magenta); }
+
+/* =========================================================
+   ONGLET CONTRE LA MONTRE
+   ========================================================= */
+.clm-controls { text-align: center; margin-bottom: 26px; }
+
+.clm-stage {
+  display: flex; flex-direction: column; align-items: center; gap: 22px;
+  opacity: .45; filter: saturate(.6);
+  transition: opacity .5s ease, filter .5s ease;
+}
+.clm-stage.revealed { opacity: 1; filter: none; }
+
+.clm-course {
+  position: relative;
+  width: 100%; max-width: 520px;
+  background: linear-gradient(135deg, var(--card-2), var(--card));
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px 26px;
+  text-align: center;
+  overflow: hidden;
+}
+.clm-course::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 6px;
+  background: linear-gradient(90deg, var(--blue), var(--magenta), var(--yellow));
+}
+.clm-course-label {
+  display: block;
+  font-size: .68rem; text-transform: uppercase; letter-spacing: .18em;
+  color: var(--ink-soft); font-weight: 700; margin-bottom: 8px;
+}
+.clm-course-name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 5vw, 2.4rem);
+  color: var(--yellow);
+  line-height: 1.15;
+}
+.clm-course.landed { animation: pop .4s ease; border-color: var(--yellow); }
+
+.clm-avatar { width: 100%; max-width: 520px; }
+.clm-frame { padding: 20px; }
+
 /* =========================================================
    ONGLET AVATARS
    ========================================================= */
@@ -415,6 +533,10 @@ body {
 @media (max-width: 720px) {
   .avatar-grid, .malus-grid { grid-template-columns: 1fr; }
   .reel { min-height: 100px; }
+}
+@media (max-width: 480px) {
+  .pools-grid, .pools-grid--2 { grid-template-columns: 1fr; }
+  .malus-list { grid-template-columns: 1fr; }
 }
 @media (max-width: 380px) {
   .reels { gap: 6px; }

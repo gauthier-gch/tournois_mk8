@@ -29,6 +29,7 @@
   <!-- Onglets -->
   <nav class="tabs" role="tablist">
     <button class="tab is-active" data-tab="regles" role="tab">Règles</button>
+    <button class="tab" data-tab="clm" role="tab">Contre la montre</button>
     <button class="tab" data-tab="avatars" role="tab">Avatars</button>
     <button class="tab" data-tab="malus" role="tab">Malus</button>
   </nav>
@@ -42,17 +43,23 @@
         <p>
           Ce tournoi n'est pas comme les autres : l'aléatoire est là pour mettre
           des bâtons dans les roues de vos karts et <strong>rabattre complètement les cartes</strong>
-          par rapport à un tournoi classique.
+          par rapport à un tournoi classique. Le tournoi se joue à <strong>16 joueurs</strong>,
+          sur <strong>deux soirées</strong>.
         </p>
 
+        <!-- ---------- Les principes ---------- -->
+        <h3 class="rules-heading">🎲 Les grands principes</h3>
+
         <div class="rule-block">
-          <span class="rule-icon">🎲</span>
+          <span class="rule-icon">🏎️</span>
           <div>
-            <h3>À chaque début de championnat</h3>
+            <h3>Avatars aléatoires</h3>
             <p>
-              Pilote, kart, roues et parapente sont attribués <strong>aléatoirement</strong>
-              à chaque joueur. Chaque joueur peut relancer son tirage
-              <strong>une seule fois</strong> par championnat.
+              Pour <strong>chaque coupe</strong> (poule, phase finale, finale), on tire au
+              sort l'avatar de chaque joueur : <strong>pilote, kart, roues et parapente</strong>.
+              Les <strong>motos « inter »</strong> (maniabilité intérieure) sont
+              <strong>exclues</strong> du tirage. Chaque joueur peut relancer son tirage
+              <strong>une seule fois sur l'ensemble du tournoi</strong>.
             </p>
           </div>
         </div>
@@ -60,26 +67,139 @@
         <div class="rule-block">
           <span class="rule-icon">🎡</span>
           <div>
-            <h3>À chaque début de course</h3>
+            <h3>La roulette des malus</h3>
             <p>
-              On lance la roulette des malus : chaque joueur a
-              <strong>3 chances sur 4</strong> d'écoper d'un malus pour la course.
+              Sur les courses concernées, on lance la roulette : chaque joueur a
+              <strong>3 chances sur 4</strong> d'écoper d'un malus. Le
+              <strong>malus duo</strong> se joue à deux : si un joueur le tire, un autre
+              en hérite forcément.
             </p>
           </div>
         </div>
 
         <div class="rule-block">
-          <span class="rule-icon">🤝</span>
+          <span class="rule-icon">⏱️</span>
           <div>
-            <h3>Le malus duo</h3>
+            <h3>Quand tombent les malus ?</h3>
             <p>
-              Certains malus se jouent à deux : si un joueur le tire,
-              un autre joueur en hérite forcément. Solidarité dans la galère !
+              <strong>Poules :</strong> uniquement à la <strong>1<sup>re</sup> course</strong>
+              et à la <strong>dernière course</strong>.<br>
+              <strong>Phases finales &amp; finale :</strong> à la
+              <strong>1<sup>re</sup></strong>, la <strong>6<sup>e</sup></strong> et la
+              <strong>dernière course</strong>.
             </p>
           </div>
         </div>
 
+        <!-- ---------- Soirée 1 ---------- -->
+        <h3 class="rules-heading">🌙 Soirée 1 — Contre la montre &amp; poules</h3>
+
+        <div class="rule-block">
+          <span class="rule-icon">⏱️</span>
+          <div>
+            <h3>Contre la montre</h3>
+            <p>
+              Chaque joueur réalise un <strong>contre la montre</strong> sur une
+              <strong>course aléatoire</strong> avec un <strong>avatar aléatoire</strong>
+              (compo et circuit tirés au sort — voir l'onglet
+              <em>Contre la montre</em>). Cela établit le
+              <strong>classement de 1 à 16</strong> qui sert à composer les poules.
+            </p>
+          </div>
+        </div>
+
+        <div class="rule-block">
+          <span class="rule-icon">👥</span>
+          <div>
+            <h3>Composition des poules</h3>
+            <p>Les 16 joueurs sont répartis selon leur rang au contre la montre :</p>
+            <div class="pools-grid">
+              <div class="pool-card"><span class="pool-name">Poule A</span><span class="pool-seeds">1 · 8 · 9 · 16</span></div>
+              <div class="pool-card"><span class="pool-name">Poule B</span><span class="pool-seeds">2 · 7 · 10 · 15</span></div>
+              <div class="pool-card"><span class="pool-name">Poule C</span><span class="pool-seeds">3 · 6 · 11 · 14</span></div>
+              <div class="pool-card"><span class="pool-name">Poule D</span><span class="pool-seeds">4 · 5 · 12 · 13</span></div>
+            </div>
+            <p>
+              Chaque poule se joue en <strong>8 courses</strong>. Les
+              <strong>2 premiers de chaque poule</strong> sont qualifiés pour la soirée 2.
+            </p>
+          </div>
+        </div>
+
+        <div class="rule-block">
+          <span class="rule-icon">⚖️</span>
+          <div>
+            <h3>Ajustement du nombre de joueurs</h3>
+            <p>
+              <strong>Si on est 15 :</strong> on force quelqu'un à venir pour compléter à 16.<br>
+              <strong>Si on est 17 :</strong> le <strong>dernier du contre la montre</strong>
+              est éliminé pour revenir à 16.
+            </p>
+          </div>
+        </div>
+
+        <!-- ---------- Soirée 2 ---------- -->
+        <h3 class="rules-heading">🏆 Soirée 2 — Phases finales &amp; finale</h3>
+
+        <div class="rule-block">
+          <span class="rule-icon">🎯</span>
+          <div>
+            <h3>Phases finales (12 courses)</h3>
+            <p>Les résultats des poules forment deux groupes :</p>
+            <div class="pools-grid pools-grid--2">
+              <div class="pool-card"><span class="pool-name">Groupe I</span><span class="pool-seeds">1<sup>er</sup>A · 2<sup>e</sup>B · 2<sup>e</sup>C · 1<sup>er</sup>D</span></div>
+              <div class="pool-card"><span class="pool-name">Groupe II</span><span class="pool-seeds">2<sup>e</sup>A · 1<sup>er</sup>B · 1<sup>er</sup>C · 2<sup>e</sup>D</span></div>
+            </div>
+            <p>Chaque groupe se joue en <strong>12 courses</strong>.</p>
+          </div>
+        </div>
+
+        <div class="rule-block">
+          <span class="rule-icon">🥇</span>
+          <div>
+            <h3>La finale (12 courses)</h3>
+            <p>
+              Les <strong>deux premiers de chaque groupe</strong> se retrouvent en
+              <strong>finale</strong>, disputée en <strong>12 courses</strong>. Le
+              vainqueur remporte le tournoi !
+            </p>
+          </div>
+        </div>
+
+        <!-- ---------- Liste des malus ---------- -->
+        <h3 class="rules-heading">🎡 Les malus possibles</h3>
+        <p>
+          Voici tous les malus qui peuvent tomber à la roulette. Un même malus
+          ne peut <strong>jamais</strong> toucher deux joueurs sur une même course,
+          sauf le <strong>malus duo</strong> qui en concerne toujours deux.
+        </p>
+        <div class="malus-list" id="malusList"><!-- généré par JS --></div>
+
         <p class="rules-footer">Bonne chance… vous allez en avoir besoin. 🍌</p>
+      </div>
+    </section>
+
+    <!-- ============ ONGLET CONTRE LA MONTRE ============ -->
+    <section id="clm" class="panel" role="tabpanel">
+      <h2 class="section-title">Contre la montre</h2>
+      <p class="section-intro">
+        On tire au sort la <strong>compo</strong> (pilote, kart, roues, parapente)
+        <strong>et</strong> le <strong>circuit</strong>. Un clic, et c'est parti !
+      </p>
+
+      <div class="clm-controls">
+        <button class="btn btn-big" id="generateClmBtn">⏱️ Générer le contre la montre</button>
+      </div>
+
+      <div class="clm-stage" id="clmStage">
+        <!-- Circuit tiré au sort -->
+        <div class="clm-course" id="clmCourse">
+          <span class="clm-course-label">Circuit</span>
+          <span class="clm-course-name" id="clmCourseName">— — —</span>
+        </div>
+
+        <!-- Avatar unique (généré par JS) -->
+        <div class="clm-avatar" id="clmAvatar"><!-- généré par JS --></div>
       </div>
     </section>
 

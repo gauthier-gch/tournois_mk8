@@ -137,6 +137,89 @@ const marioKartData = {
 };
 
 /* =========================================================
+   LISTE DES CIRCUITS
+   - "nitros"  : circuits de base (actifs)
+   - "retros"  : circuits rétros (actifs)
+   - "additionnels" : circuits DLC — VOLONTAIREMENT COMMENTÉS
+     pour ne JAMAIS être requêtés ni tirés au sort.
+     Pour les réactiver, décommenter le bloc ci-dessous et
+     l'ajouter à `getAvailableCircuits()`.
+   ========================================================= */
+
+const circuitsData = {
+  nitros: [
+    "Champidrome",
+    "Parc Aquatique",
+    "Canyon Gourmand",
+    "Temple Thwomp",
+    "Circuit Mario",
+    "Promenade Toad",
+    "Manoir Englouti",
+    "Cascades Maskass",
+    "Aéroport Azur",
+    "Lagon Tourbillon",
+    "Électrodrome",
+    "Descente Givrée",
+    "Voie céleste",
+    "Désert Toussec",
+    "Château de Bowser",
+    "Route Arc-en-ciel"
+  ],
+  retros: [
+    "Wii Prairie Meuh Meuh",
+    "GBA Circuit Mario",
+    "DS Plage Cheep Cheep",
+    "N64 Autoroute Toad",
+    "GCN Désert Sec-Sec",
+    "SNES Plaine Donut 3",
+    "N64 Autodrome Royal",
+    "3DS Jungle DK",
+    "DS Stade Wario",
+    "GCN Royaume Sorbet",
+    "3DS Piste Musicale",
+    "N64 Vallée Yoshi",
+    "DS Horloge Tic-Tac",
+    "3DS Égout Piranha",
+    "Wii Volcan Grondant",
+    "N64 Route Arc-en-ciel"
+  ]
+  /* -------------------------------------------------------
+     CIRCUITS ADDITIONNELS (DLC) — commentés volontairement.
+     Ils ne sont jamais requêtés ni tirés tant que ce bloc
+     reste en commentaire.
+  ,
+  additionnels: [
+    "GCN Circuit Yoshi",
+    "Arène d'Excitebike",
+    "Route du dragon",
+    "Mute City",
+    "Wii Mine Wario",
+    "SNES Route Arc-en-ciel",
+    "Station Glagla",
+    "Circuit d'Hyrule",
+    "GCN Parc Baby",
+    "GBA Pays Fromage",
+    "Passage Feuillage",
+    "Animal Crossing",
+    "3DS Koopapolis",
+    "GBA Route Ruban",
+    "Métro Turbo",
+    "Big Blue"
+  ]
+  ------------------------------------------------------- */
+};
+
+/* Renvoie la liste des circuits réellement disponibles au tirage
+   (uniquement les groupes NON commentés). */
+function getAvailableCircuits() {
+  return [
+    ...(circuitsData.nitros || []),
+    ...(circuitsData.retros || [])
+    // ...(circuitsData.additionnels || [])  // décommenter pour inclure les DLC
+  ];
+}
+
+/* =========================================================
    LISTE DES MALUS
    - "single"  : un seul joueur peut l'avoir
    - "duo"     : doit concerner exactement 2 joueurs
@@ -161,7 +244,8 @@ const malusData = {
     "Débuter la course avec 10 secondes de retard",
     "S'arrêter au tour 1 pendant 10 secondes",
     "Chaque ligne d'arrivée est un stop : il faut marquer l'arrêt",
-    "Jouer la course sans activer de cadeau"
+    "Jouer la course sans activer de cadeau",
+    "Interdiction de déraper"
   ],
   duo: [
     "Deux joueurs doivent jouer les deux bras enlacés"
