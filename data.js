@@ -140,25 +140,23 @@ const marioKartData = {
    LISTE DES CIRCUITS
    - "nitros"  : circuits de base (actifs)
    - "retros"  : circuits rétros (actifs)
-   - "additionnels" : circuits DLC — VOLONTAIREMENT COMMENTÉS
-     pour ne JAMAIS être requêtés ni tirés au sort.
-     Pour les réactiver, décommenter le bloc ci-dessous et
-     l'ajouter à `getAvailableCircuits()`.
+   - "additionnels" les 4 payants
+   - DLC non ajoutés
    ========================================================= */
 
 const circuitsData = {
   nitros: [
     "Champidrome",
-    "Parc Aquatique",
-    "Canyon Gourmand",
+    "Parc Glougloop",
+    "Piste aux délices",
     "Temple Thwomp",
     "Circuit Mario",
     "Promenade Toad",
-    "Manoir Englouti",
+    "Manoir Trempé",
     "Cascades Maskass",
     "Aéroport Azur",
     "Lagon Tourbillon",
-    "Électrodrome",
+    "Club Mario",
     "Descente Givrée",
     "Voie céleste",
     "Désert Toussec",
@@ -173,7 +171,7 @@ const circuitsData = {
     "GCN Désert Sec-Sec",
     "SNES Plaine Donut 3",
     "N64 Autodrome Royal",
-    "3DS Jungle DK",
+    "3DS Forêt Tropicale DK",
     "DS Stade Wario",
     "GCN Royaume Sorbet",
     "3DS Piste Musicale",
@@ -182,31 +180,25 @@ const circuitsData = {
     "3DS Égout Piranha",
     "Wii Volcan Grondant",
     /*"N64 Route Arc-en-ciel"*/
-  ]
-  /* -------------------------------------------------------
-     CIRCUITS ADDITIONNELS (DLC) — commentés volontairement.
-     Ils ne sont jamais requêtés ni tirés tant que ce bloc
-     reste en commentaire.
-  ,
+  ],
   additionnels: [
     "GCN Circuit Yoshi",
-    "Arène d'Excitebike",
+    /*"Arène d'Excitebike",*/
     "Route du dragon",
     "Mute City",
     "Wii Mine Wario",
     "SNES Route Arc-en-ciel",
     "Station Glagla",
     "Circuit d'Hyrule",
-    "GCN Parc Baby",
+    /*"GCN Parc Baby",*/
     "GBA Pays Fromage",
     "Passage Feuillage",
-    "Animal Crossing",
+    /*"Animal Crossing",*/
     "3DS Koopapolis",
     "GBA Route Ruban",
     "Métro Turbo",
     "Big Blue"
   ]
-  ------------------------------------------------------- */
 };
 
 /* Renvoie la liste des circuits réellement disponibles au tirage
@@ -215,7 +207,7 @@ function getAvailableCircuits() {
   return [
     ...(circuitsData.nitros || []),
     ...(circuitsData.retros || [])
-    // ...(circuitsData.additionnels || [])  // décommenter pour inclure les DLC
+    ...(circuitsData.additionnels || [])  
   ];
 }
 
