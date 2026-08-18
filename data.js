@@ -169,7 +169,7 @@ const circuitsData = {
     "Wii Prairie Meuh Meuh",
     "GBA Circuit Mario",
     "DS Plage Cheep Cheep",
-    "N64 Autoroute Toad",
+    /*"N64 Autoroute Toad",*/
     "GCN Désert Sec-Sec",
     "SNES Plaine Donut 3",
     "N64 Autodrome Royal",
@@ -181,7 +181,7 @@ const circuitsData = {
     "DS Horloge Tic-Tac",
     "3DS Égout Piranha",
     "Wii Volcan Grondant",
-    "N64 Route Arc-en-ciel"
+    /*"N64 Route Arc-en-ciel"*/
   ]
   /* -------------------------------------------------------
      CIRCUITS ADDITIONNELS (DLC) — commentés volontairement.
