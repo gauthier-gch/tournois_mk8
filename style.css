@@ -234,6 +234,42 @@ body {
 }
 .pool-card sup { font-size: .62em; }
 
+/* Liste des malus dans les règles */
+.malus-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+.malus-cat {
+  background: var(--asphalt);
+  border: 1px solid rgba(255,255,255,.1);
+  border-top: 4px solid var(--ink-soft);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+.malus-cat.ml-phys { border-top-color: var(--blue); }
+.malus-cat.ml-game { border-top-color: var(--orange); }
+.malus-cat.ml-duo  { border-top-color: var(--magenta); grid-column: 1 / -1; }
+.malus-cat h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem; margin: 0 0 10px; color: var(--ink);
+  display: flex; align-items: center; gap: 8px;
+}
+.malus-count {
+  font-family: var(--font-body); font-size: .7rem; font-weight: 800;
+  background: rgba(255,255,255,.1); color: var(--ink-soft);
+  border-radius: 999px; padding: 2px 9px;
+}
+.malus-cat ul { margin: 0; padding-left: 18px; }
+.malus-cat li {
+  color: var(--ink-soft); line-height: 1.55; margin-bottom: 5px;
+  font-size: .92rem;
+}
+.malus-cat.ml-phys h4 { color: var(--blue); }
+.malus-cat.ml-game h4 { color: var(--orange); }
+.malus-cat.ml-duo  h4 { color: var(--magenta); }
+
 /* =========================================================
    ONGLET CONTRE LA MONTRE
    ========================================================= */
@@ -500,6 +536,7 @@ body {
 }
 @media (max-width: 480px) {
   .pools-grid, .pools-grid--2 { grid-template-columns: 1fr; }
+  .malus-list { grid-template-columns: 1fr; }
 }
 @media (max-width: 380px) {
   .reels { gap: 6px; }

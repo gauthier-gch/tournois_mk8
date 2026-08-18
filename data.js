@@ -244,7 +244,8 @@ const malusData = {
     "Débuter la course avec 10 secondes de retard",
     "S'arrêter au tour 1 pendant 10 secondes",
     "Chaque ligne d'arrivée est un stop : il faut marquer l'arrêt",
-    "Jouer la course sans activer de cadeau"
+    "Jouer la course sans activer de cadeau",
+    "Interdiction de déraper"
   ],
   duo: [
     "Deux joueurs doivent jouer les deux bras enlacés"

@@ -125,6 +125,28 @@ function initAvatars() {
 }
 
 /* =========================================================
+   1 bis) ONGLET RÈGLES — liste des malus (générée depuis data.js)
+   ========================================================= */
+function buildMalusList() {
+  const wrap = document.getElementById("malusList");
+  if (!wrap) return;
+
+  const groups = [
+    { key: "physique", label: "Physique", cls: "ml-phys", items: malusData.physique },
+    { key: "ingame",   label: "In Game",  cls: "ml-game", items: malusData.ingame },
+    { key: "duo",      label: "Duo 🤝",   cls: "ml-duo",  items: malusData.duo },
+  ];
+
+  wrap.innerHTML = groups.map((g) => `
+    <div class="malus-cat ${g.cls}">
+      <h4>${g.label} <span class="malus-count">${g.items.length}</span></h4>
+      <ul>
+        ${g.items.map((t) => `<li>${t}</li>`).join("")}
+      </ul>
+    </div>`).join("");
+}
+
+/* =========================================================
    2 bis) ONGLET CONTRE LA MONTRE — 1 avatar + 1 circuit
    ========================================================= */
 
@@ -357,6 +379,7 @@ function initMalus() {
    ========================================================= */
 document.addEventListener("DOMContentLoaded", () => {
   initTabs();
+  buildMalusList();
   initTimeTrial();
   initAvatars();
   initMalus();
