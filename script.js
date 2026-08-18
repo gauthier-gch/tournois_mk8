@@ -125,6 +125,61 @@ function initAvatars() {
 }
 
 /* =========================================================
+   2 bis) ONGLET CONTRE LA MONTRE — 1 avatar + 1 circuit
+   ========================================================= */
+
+function buildTimeTrialFrame() {
+  const wrap = document.getElementById("clmAvatar");
+  let reels = "";
+  REEL_CATS.forEach((c) => {
+    reels += `
+      <div class="reel" data-cat="${c.key}">
+        <div class="reel-label">${c.label}</div>
+        <div class="reel-img-wrap"><img src="" alt="" /></div>
+        <div class="reel-name"></div>
+      </div>`;
+  });
+  wrap.innerHTML = `
+    <div class="avatar-frame clm-frame">
+      <div class="frame-head">
+        <span class="frame-title">🏁 Ta compo</span>
+      </div>
+      <div class="reels">${reels}</div>
+    </div>`;
+}
+
+function initTimeTrial() {
+  buildTimeTrialFrame();
+
+  const btn = document.getElementById("generateClmBtn");
+  const stage = document.getElementById("clmStage");
+  const courseName = document.getElementById("clmCourseName");
+  const courseBox = document.getElementById("clmCourse");
+  const frame = document.querySelector("#clmAvatar .avatar-frame");
+
+  btn.addEventListener("click", () => {
+    // 1) Circuit aléatoire parmi les circuits NON commentés
+    const circuits = getAvailableCircuits();
+    const chosen = circuits[Math.floor(Math.random() * circuits.length)];
+
+    stage.classList.add("revealed");
+    courseBox.classList.remove("landed");
+    courseName.textContent = "…";
+
+    // 2) Avatar unique : les 4 cases défilent
+    generateFrame(frame);
+
+    // Petit effet : le circuit se "fixe" avec les cases
+    setTimeout(() => {
+      courseName.textContent = chosen;
+      courseBox.classList.add("landed");
+    }, 900);
+
+    btn.textContent = "⏱️ Relancer le contre la montre";
+  });
+}
+
+/* =========================================================
    3) ONGLET MALUS — roulettes
    ========================================================= */
 
@@ -302,6 +357,7 @@ function initMalus() {
    ========================================================= */
 document.addEventListener("DOMContentLoaded", () => {
   initTabs();
+  initTimeTrial();
   initAvatars();
   initMalus();
 });
