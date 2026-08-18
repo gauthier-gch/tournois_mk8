@@ -232,7 +232,7 @@ const malusData = {
     "Jouer la course dans un miroir",
     "Taper sur la table toutes les 15 secondes",
     "Jouer assis par terre, en dessous de la télé",
-    "Jouer avec un livre sur la tête — s'il tombe, on stoppe la course pour le remettre en place",
+    "Jouer avec un livre sur la tête",
     "Jouer la course avec des lunettes de soleil",
     "Jouer la course avec des lunettes de vue",
     "Jouer la course avec des lunettes de bourrés",
