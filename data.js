@@ -77,15 +77,15 @@ const marioKartData = {
     { name: "Magikart", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/karts/p_wing.png" },
     { name: "Koopa-mobile", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/karts/koopa_clown.png" },
     { name: "Moto standard", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/bikes/standard_bike.png" },
-    { name: "Météore", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/bikes/comet.png" },
-    { name: "Sport GP", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/bikes/sport_bike.png" },
+    /*{ name: "Météore", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/bikes/comet.png" },*/
+    /*{ name: "Sport GP", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/bikes/sport_bike.png" },*/
     { name: "Cybertrombe", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/bikes/the_duke.png" },
     { name: "Flamboyante", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/bikes/flame_rider.png" },
     { name: "Mécabécane", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/bikes/varmint.png" },
     { name: "Scootinette", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/bikes/mr_scooty.png" },
-    { name: "Epervier", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/bikes/jet_bike.png" },
-    { name: "Yoshimoto", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/bikes/yoshi_bike.png" },
-    { name: "Destrier de légende", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/bikes/master_cycle.png" },
+    /*{ name: "Epervier", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/bikes/jet_bike.png" },*/
+    /*{ name: "Yoshimoto", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/bikes/yoshi_bike.png" },*/
+    /*{ name: "Destrier de légende", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/bikes/master_cycle.png" },*/
     { name: "Destrier de légende 0.1", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/bikes/master_cycle_zero.png" },
     { name: "Scooter AC", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/bikes/city_tripper.png" },
     { name: "Quad standard", img: "https://seraphindalberto.yo.fr/MarioKart/img/mario_kart_8/vehicles/atvs/standard_atv.png" },
