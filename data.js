@@ -206,8 +206,8 @@ const circuitsData = {
 function getAvailableCircuits() {
   return [
     ...(circuitsData.nitros || []),
-    ...(circuitsData.retros || [])
-    ...(circuitsData.additionnels || [])  
+    ...(circuitsData.retros || []),
+    ...(circuitsData.additionnels || [])
   ];
 }
 
