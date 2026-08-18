@@ -86,8 +86,18 @@ body {
   color: var(--yellow);
   transform: rotate(-2.5deg);
 }
+.der-des-der {
+  margin: 12px 0 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: clamp(1rem, 3.2vw, 1.5rem);
+  color: var(--red);
+  text-shadow: 0 2px 0 rgba(0,0,0,.4);
+}
 .subtitle {
-  margin: 14px 0 0;
+  margin: 10px 0 0;
   color: var(--ink-soft);
   font-style: italic;
 }

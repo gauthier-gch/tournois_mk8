@@ -21,6 +21,7 @@
     <div class="header-inner">
       <p class="kicker">🏁 Site officiel 🏁</p>
       <h1 class="site-title">Tournoi des Bâtons<br><span>dans les Roues</span></h1>
+      <p class="der-des-der">LA DER DES DER</p>
       <p class="subtitle">Là où l'aléatoire rabat toutes les cartes.</p>
     </div>
     <div class="speed-lines" aria-hidden="true"></div>
@@ -29,7 +30,7 @@
   <!-- Onglets -->
   <nav class="tabs" role="tablist">
     <button class="tab is-active" data-tab="regles" role="tab">Règles</button>
-    <button class="tab" data-tab="clm" role="tab">Contre la montre</button>
+    <button class="tab" data-tab="clm" role="tab">Qualifications</button>
     <button class="tab" data-tab="avatars" role="tab">Avatars</button>
     <button class="tab" data-tab="malus" role="tab">Malus</button>
   </nav>
@@ -55,7 +56,7 @@
           <div>
             <h3>Avatars aléatoires</h3>
             <p>
-              Pour <strong>chaque coupe</strong> (poule, phase finale, finale), on tire au
+              Pour <strong>chaque coupe</strong> (poule, demi-finale, finale), on tire au
               sort l'avatar de chaque joueur : <strong>pilote, kart, roues et parapente</strong>.
               Les <strong>motos « inter »</strong> (maniabilité intérieure) sont
               <strong>exclues</strong> du tirage. Chaque joueur peut relancer son tirage
@@ -84,7 +85,7 @@
             <p>
               <strong>Poules :</strong> uniquement à la <strong>1<sup>re</sup> course</strong>
               et à la <strong>dernière course</strong>.<br>
-              <strong>Phases finales &amp; finale :</strong> à la
+              <strong>Demi-finales &amp; finale :</strong> à la
               <strong>1<sup>re</sup></strong>, la <strong>6<sup>e</sup></strong> et la
               <strong>dernière course</strong>.
             </p>
@@ -99,11 +100,11 @@
           <div>
             <h3>Contre la montre</h3>
             <p>
-              Chaque joueur réalise un <strong>contre la montre</strong> sur une
-              <strong>course aléatoire</strong> avec un <strong>avatar aléatoire</strong>
-              (compo et circuit tirés au sort — voir l'onglet
-              <em>Contre la montre</em>). Cela établit le
-              <strong>classement de 1 à 16</strong> qui sert à composer les poules.
+              On tire au sort <strong>une seule course</strong> et
+              <strong>un seul avatar</strong>, <strong>identiques pour tous les joueurs</strong>
+              (voir l'onglet <em>Qualifications</em>). Chacun réalise son
+              <strong>contre la montre</strong> dans ces mêmes conditions. Le chrono
+              établit le <strong>classement de 1 à 16</strong> qui sert à composer les poules.
             </p>
           </div>
         </div>
@@ -131,20 +132,23 @@
           <div>
             <h3>Ajustement du nombre de joueurs</h3>
             <p>
-              <strong>Si on est 15 :</strong> on force quelqu'un à venir pour compléter à 16.<br>
-              <strong>Si on est 17 :</strong> le <strong>dernier du contre la montre</strong>
-              est éliminé pour revenir à 16.
+              <strong>Si on est moins de 16 :</strong> les poules ne seront pas complètes,
+              mais on conserve tout de même <strong>2 qualifiés par poule</strong>.<br>
+              <strong>Si on est plus de 16 :</strong> les <strong>derniers du contre la montre</strong>
+              sont <strong>éliminés</strong> (non qualifiés) pour revenir à 16.<br>
+              Dans tous les cas, les joueurs éliminés ou non qualifiés
+              <strong>peuvent quand même assister aux soirées</strong>.
             </p>
           </div>
         </div>
 
         <!-- ---------- Soirée 2 ---------- -->
-        <h3 class="rules-heading">🏆 Soirée 2 — Phases finales &amp; finale</h3>
+        <h3 class="rules-heading">🏆 Soirée 2 — Demi-finales &amp; finale</h3>
 
         <div class="rule-block">
           <span class="rule-icon">🎯</span>
           <div>
-            <h3>Phases finales (12 courses)</h3>
+            <h3>Demi-finales (12 courses)</h3>
             <p>Les résultats des poules forment deux groupes :</p>
             <div class="pools-grid pools-grid--2">
               <div class="pool-card"><span class="pool-name">Groupe I</span><span class="pool-seeds">1<sup>er</sup>A · 2<sup>e</sup>B · 2<sup>e</sup>C · 1<sup>er</sup>D</span></div>
@@ -175,20 +179,45 @@
         </p>
         <div class="malus-list" id="malusList"><!-- généré par JS --></div>
 
+        <div class="rule-block">
+          <span class="rule-icon">📖</span>
+          <div>
+            <h3>Précision — Livre sur la tête</h3>
+            <p>
+              Si le livre tombe, le joueur doit le <strong>remettre sur sa tête</strong> :
+              la course <strong>n'est pas stoppée</strong> pour autant.
+            </p>
+          </div>
+        </div>
+
+        <div class="rule-block">
+          <span class="rule-icon">⛔</span>
+          <div>
+            <h3>Malus non respecté = pénalité</h3>
+            <p>
+              Un malus non respecté entraîne <strong>1 point en moins</strong> au classement
+              de la coupe en cours. Si un <strong>même joueur</strong> ne respecte pas un
+              nouveau malus, la sanction passe à <strong>−2 points</strong>, puis
+              <strong>−3 points</strong>, et ainsi de suite.
+            </p>
+          </div>
+        </div>
+
         <p class="rules-footer">Bonne chance… vous allez en avoir besoin. 🍌</p>
       </div>
     </section>
 
-    <!-- ============ ONGLET CONTRE LA MONTRE ============ -->
+    <!-- ============ ONGLET QUALIFICATIONS (contre la montre) ============ -->
     <section id="clm" class="panel" role="tabpanel">
-      <h2 class="section-title">Contre la montre</h2>
+      <h2 class="section-title">Qualifications</h2>
       <p class="section-intro">
-        On tire au sort la <strong>compo</strong> (pilote, kart, roues, parapente)
-        <strong>et</strong> le <strong>circuit</strong>. Un clic, et c'est parti !
+        Contre la montre : on tire au sort <strong>une seule course</strong> et
+        <strong>un seul avatar</strong> (pilote, kart, roues, parapente),
+        <strong>identiques pour tous les joueurs</strong>. Un clic, et c'est parti !
       </p>
 
       <div class="clm-controls">
-        <button class="btn btn-big" id="generateClmBtn">⏱️ Générer le contre la montre</button>
+        <button class="btn btn-big" id="generateClmBtn">⏱️ Générer les qualifications</button>
       </div>
 
       <div class="clm-stage" id="clmStage">

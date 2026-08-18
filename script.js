@@ -164,7 +164,7 @@ function buildTimeTrialFrame() {
   wrap.innerHTML = `
     <div class="avatar-frame clm-frame">
       <div class="frame-head">
-        <span class="frame-title">🏁 Ta compo</span>
+        <span class="frame-title">🏁 La compo commune</span>
       </div>
       <div class="reels">${reels}</div>
     </div>`;
@@ -197,7 +197,7 @@ function initTimeTrial() {
       courseBox.classList.add("landed");
     }, 900);
 
-    btn.textContent = "⏱️ Relancer le contre la montre";
+    btn.textContent = "⏱️ Relancer les qualifications";
   });
 }
 
