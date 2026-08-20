@@ -1,6 +1,7 @@
 # 🏁 Tournoi des Bâtons dans les Roues
 
 Site web d'un tournoi Mario Kart où l'aléatoire « met des bâtons dans les roues ».
+Le site est accessible via ce lien : `https://<utilisateur>.github.io/<dépôt>/`.
 
 ## Onglets
 
