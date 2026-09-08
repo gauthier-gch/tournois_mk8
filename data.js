@@ -221,10 +221,8 @@ const malusData = {
   physique: [
     "Jouer la course avec un œil de pirate",
     "Jouer la course sur une jambe",
-    "Jouer la course dans un miroir",
     "Taper sur la table toutes les 15 secondes",
     "Jouer assis par terre, en dessous de la télé",
-    "Jouer avec un livre sur la tête",
     "Jouer la course avec des lunettes de soleil",
     "Jouer la course avec des lunettes de vue",
     "Jouer la course avec des lunettes de bourrés",
