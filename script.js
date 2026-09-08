@@ -206,20 +206,18 @@ function initTimeTrial() {
    ========================================================= */
 
 /* Construit la liste ordonnée des segments des roues.
-   Ordre = physique → in game → duo → aucun
+   Ordre = physique → in game → duo
    (cet ordre doit rester cohérent avec computeAssignment) */
 function buildSegments() {
   const segs = [];
   malusData.physique.forEach((t, i) => segs.push({ type: "phys", text: t, label: "P" + (i + 1) }));
   malusData.ingame.forEach((t, i) => segs.push({ type: "game", text: t, label: "J" + (i + 1) }));
   segs.push({ type: "duo",  text: malusData.duo[0],   label: "DUO" });
-  segs.push({ type: "none", text: "Aucun malus 🍀", label: "RAS" });
   return segs;
 }
 
 const SEGMENTS = buildSegments();
 const DUO_INDEX = SEGMENTS.findIndex((s) => s.type === "duo");
-const NONE_INDEX = SEGMENTS.findIndex((s) => s.type === "none");
 
 /* Couleurs des quartiers selon le type (2 nuances pour le contraste) */
 function colorFor(seg, i) {
@@ -276,16 +274,16 @@ function buildMalusWheels() {
 }
 
 /* Calcule une attribution VALIDE pour les 4 joueurs :
-   - 3 chances sur 4 d'avoir un malus
+   - tous les joueurs écopent d'un malus
    - aucun doublon (sauf duo)
    - le duo concerne EXACTEMENT 2 joueurs
    Renvoie un tableau de 4 indices de segment. */
 function computeAssignment() {
-  const result = [NONE_INDEX, NONE_INDEX, NONE_INDEX, NONE_INDEX];
+  const result = [null, null, null, null];
 
-  // Qui écope d'un malus ?
+  // Tous les joueurs écopent d'un malus
   const needs = [];
-  for (let p = 0; p < 4; p++) if (Math.random() < 0.75) needs.push(p);
+  for (let p = 0; p < 4; p++) needs.push(p);
   shuffle(needs);
 
   // Pool des malus "solo" (physique + in game)

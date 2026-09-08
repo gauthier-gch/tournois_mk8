@@ -9,7 +9,7 @@ Le site est accessible via ce lien https://gauthier-gch.github.io/tournois_mk8/
 - **Avatars** — génération aléatoire (pilote / kart / roues / parapente) pour 4 joueurs,
   façon machine à sous. Chaque encadré peut être relancé **une fois**.
 - **Malus** — une roulette par joueur. Les 4 roues tournent en même temps :
-  - chaque joueur a **3 chances sur 4** d'écoper d'un malus ;
+  - chaque joueur écope **toujours** d'un malus ;
   - jamais deux fois le même malus… **sauf le malus duo**, qui touche toujours **2 joueurs**.
 
 ## Fichiers
